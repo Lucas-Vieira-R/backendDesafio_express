@@ -9,7 +9,7 @@ const documents ={
   4: 'CDI',
 };
 
-/* GET users listing. */
+/* GET documents listing. */
 router.get('/', function(req, res, next) {
   const entradas = Object.entries(documents);
   const resultado = entradas.reduce((obj, [chave, valor])=>{
@@ -56,7 +56,7 @@ router.delete('/:id', function(req, res, next) {
 router.put('/:id', function(req, res, next) {
   const {id} = req.params;
   const {document} = req.body;
-  if (users[id]) {
+  if (documents[id]) {
     documents[id] = document;
     const resultado = {
       mensagem: 'Documento atualizado com sucesso!',

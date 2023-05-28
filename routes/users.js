@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 
-const users ={1: 'john', 2: 'luke', 3: 'gabriel', 4: 'peter'};
+const users ={'1': 'john', '2': 'luke', '3': 'gabriel', '4': 'peter'};
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
